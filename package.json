@@ -2,7 +2,7 @@
   "name": "react-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "test": "cypress run  --headless --reporter mochawesome",
     "start": "webpack-dev-server --mode development --watch --open --hot --port=3000",
@@ -17,9 +17,7 @@
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.9.0"
   },
-  "browserlist":[
-    "last 2 chrome versions"
-  ],
+  
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
