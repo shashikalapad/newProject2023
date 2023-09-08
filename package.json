@@ -17,6 +17,9 @@
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^6.9.0"
   },
+  "browserlist":[
+    "last 2 chrome versions"
+  ],
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
