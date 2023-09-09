@@ -52,6 +52,7 @@ const Login = ({setLoginDetails}) => {
                             <input type="password" placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} required /><br />
                         </div>
                         <button onClick={(e)=>LoginData(e)}>Log in</button>
+                        //if user doesnot loged in show the button otherwise hide
                         <p style={{ color: "rgb(13,110,253)", cursor: "pointer" }}>Forgot Password ?</p>
                     </div>
                 </div>

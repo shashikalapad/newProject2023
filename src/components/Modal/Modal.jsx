@@ -12,6 +12,7 @@ const Modal = ({setData,data,modelData,index,fakeString}) => {
     
     console.log(modelData)
     const [success, setSuccess] = useState(false);
+    let isCvvEntered = false;
     return (
         <>
             <div className='modalCss'>
@@ -34,20 +35,26 @@ const Modal = ({setData,data,modelData,index,fakeString}) => {
                     </div>
                     <div><h3 style={{textAlign:"center"}}>Payment Method </h3></div>
                     <div className='PaymentInput'>
-                        <input type="text" placeholder='Name on Card' />
+                        <input type="text" placeholder='Name on Card' required />
                     </div>
                     <div className='PaymentInput'>
-                        <input type="number" placeholder='Card Number' />
+                        <input type="number" placeholder='Card Number' max="16"min="16" required/>
                     </div>
                     <div className='PaymentInput'>
-                        <input type="date" placeholder='Expiry Date' />
+                        <input type="date" placeholder='Expiry Date' required />
                     </div>
                     <div className='PaymentInput'>
-                        <input type="number" placeholder='CVV' />
+                        <input  type="number" placeholder='CVV' onSubmit={
+                            isCvvEntered=true
+                        }
+                        
+                            max="3" min="3" required/>
+                        
                     </div>
                     <div className='btnPay'>
                         <button style={{backgroundColor:"rgb(220,53,69)"}} onClick={cancel}>Cancel</button>
-                        <button onClick={()=>{setSuccess(true)}}>Pay</button>
+
+                       {isCvvEntered ?<button onClick={()=>{setSuccess(true)}}>Pay</button>:null}
                     </div>
 
                 </div>
