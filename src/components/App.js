@@ -9,17 +9,18 @@ import Hotels from './FetchData/Hotels.jsx';
 import NotFound from './NotFound';
 import Login from './LOGIN/Login';
 import SignUp from './SignUP/SignUp'
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 export const DataParentContext = React.createContext();
 
 const App = () => {
-  const [LoginDetails, setLoginDetails] = useState([])
+  const [LoginDetails, setLoginDetails] = useState([]);
   //console.log("shashi", LoginDetails)
   return (
     <>
       <BrowserRouter>
         <DataParentContext.Provider value={{ LoginDetails, setLoginDetails }} >
-          <Navbar />
+          <Navbar/>
 
           <Routes>
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
@@ -34,7 +35,6 @@ const App = () => {
       </BrowserRouter>
     </>
   )
-}
 
-
+  }
 export default App;

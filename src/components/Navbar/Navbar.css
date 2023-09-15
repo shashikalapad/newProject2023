@@ -1,3 +1,5 @@
+
+
 .NavbarContainer {
     position: sticky;
     background-color: white;
@@ -22,7 +24,8 @@
     font-size: 18px;
     color: orangered;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+   
+} 
 
 .navlinks:hover {
     color: red;

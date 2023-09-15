@@ -60,3 +60,9 @@
 .btnSearch button:hover{
     background-color: rgb(19,65,117);
 }
+@media only screen and (max-width:700px){
+    .BIDF{
+        font-size: 12px;
+    }
+
+}
