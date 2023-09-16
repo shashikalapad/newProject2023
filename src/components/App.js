@@ -19,11 +19,11 @@ const App = () => {
   //console.log("shashi", LoginDetails)
   return (
     <>
-      <BrowserRouter className="App" id="outer-container">
+      <BrowserRouter>
         <DataParentContext.Provider value={{ LoginDetails, setLoginDetails }} >
           <Navbar/>
           <Sidebar pageWrapID={"page-wrap"} outerContainerId={"outer-container"} />
-          <Routes id="page-wrap">
+          <Routes>
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
             <Route path='/signUp' element={<SignUp />} />
             <Route path='/' element={<ApiFetch />} />
