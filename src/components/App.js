@@ -8,7 +8,8 @@ import TrainsApi from './FetchData/TrainsApi';
 import Hotels from './FetchData/Hotels.jsx';
 import NotFound from './NotFound';
 import Login from './LOGIN/Login';
-import SignUp from './SignUP/SignUp'
+import SignUp from './SignUP/SignUp';
+import Sidebar from '../../sidebar.js';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 export const DataParentContext = React.createContext();
@@ -18,11 +19,11 @@ const App = () => {
   //console.log("shashi", LoginDetails)
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter className="App" id="outer-container">
         <DataParentContext.Provider value={{ LoginDetails, setLoginDetails }} >
           <Navbar/>
-
-          <Routes>
+          <Sidebar pageWrapID={"page-wrap"} outerContainerId={"outer-container"} />
+          <Routes id="page-wrap">
             <Route path='/login' element={<Login setLoginDetails={setLoginDetails} />} />
             <Route path='/signUp' element={<SignUp />} />
             <Route path='/' element={<ApiFetch />} />

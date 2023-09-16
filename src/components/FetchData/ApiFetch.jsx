@@ -40,8 +40,8 @@ const ApiFetch = () => {
     }, []);
     return (
         <div>
-            <SearchContent data="Flight" />
-            {loader ? <div style={{ marginLeft: "590px" }}><ColorRing
+            < SearchContent data="Flight" />
+            {loader ? <div style={{marginLeft: "590px" }}><ColorRing
                 visible={true}
                 height="80"
                 width="80"
